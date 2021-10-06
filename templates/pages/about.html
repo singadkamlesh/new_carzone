@@ -276,17 +276,19 @@
     <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
   </div>
   <div class="row">
+{% for trainer in trainers %}
+
     <div class="col-xl-4 col-md-12">
       <div class="card mb-xl-0">
         <div class="card-body">
           <div class="team-section text-center">
             <div class="team-img">
-              <img src="{%static 'images/users/male/1.jpg' %}"" class="img-thumbnail rounded-circle alt=" alt="img">
+              <img src="{{ trainer.photo.url }}" class="img-thumbnail rounded-circle alt=" alt="img">
             </div>
-            <h3 class="font-weight-bold dark-grey-text mt-4">Tracey	Poole</h3>
-            <h6 class="font-weight-bold blue-text ">Web Offlineer</h6>
+            <h3 class="font-weight-bold dark-grey-text mt-4">{{ trainer.first_name }} {{ trainer.last_name}}</h3>
+            <h6 class="font-weight-bold blue-text ">{{ trainer.desination}}</h6>
             <p class="font-weight-normal dark-grey-text">
-            <i class="fa fa-quote-left pr-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.</p>
+            <i class="fa fa-quote-left pr-2"></i>{{ trainer.about_member}}</p>
             <div class="text-warning">
               <i class="fa fa-star"> </i>
               <i class="fa fa-star"> </i>
@@ -298,50 +300,8 @@
         </div>
       </div>
     </div>
-    <div class="col-xl-4 col-md-12">
-      <div class="card mb-xl-0">
-        <div class="card-body">
-          <div class="team-section text-center">
-            <div class="team-img">
-              <img src="{%static 'images/users/female/1.jpg' %}"" class="img-thumbnail rounded-circle alt=" alt="img">
-            </div>
-            <h3 class="font-weight-bold dark-grey-text mt-4">Harry	Walker</h3>
-            <h6 class="font-weight-bold blue-text ">Web Developer</h6>
-            <p class="font-weight-normal dark-grey-text">
-            <i class="fa fa-quote-left pr-2"></i>Ut enim ad minima veniam, quis nostrum exercitationem ullam quis nostrum  corporis suscipit laboriosam, nisi ut aliquid commodi.</p>
-            <div class="text-warning">
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-4 col-md-12">
-      <div class="card mb-0">
-        <div class="card-body">
-          <div class="team-section text-center">
-            <div class="team-img">
-              <img src="{%static 'images/users/male/2.jpg' %}" class="img-thumbnail rounded-circle alt=" alt="img">
-            </div>
-            <h3 class="font-weight-bold dark-grey-text mt-4">Paul White</h3>
-            <h6 class="font-weight-bold blue-text ">Photographer</h6>
-            <p class="font-weight-normal dark-grey-text">
-            <i class="fa fa-quote-left pr-2"></i>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.</p>
-            <div class="text-warning">
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star"> </i>
-              <i class="fa fa-star-o"> </i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
+    {% endfor %}
   </div>
 </div>
 </section>

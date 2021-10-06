@@ -1,11 +1,16 @@
 from django.shortcuts import render
+from .models import Trainer
 
 # Create your views here.
 def home(request):
     return render(request, 'pages/home.html')
 
 def about(request):
-    return render(request, 'pages/about.html')
+    trainers = Trainer.objects.all()
+    data = {
+        'trainers' : trainers,
+    }
+    return render(request, 'pages/about.html', data)
 
 
 def widgets(request):
