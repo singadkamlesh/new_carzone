@@ -12,17 +12,26 @@ def about(request):
     }
     return render(request, 'pages/about.html', data)
 
-
 def widgets(request):
     return render(request, 'pages/widgets.html')
 
 def blog(request):
     return render(request, 'pages/blog.html')
 
-
 def contact(request):
     return render(request, 'pages/contact.html')
 
-
 def enrollnow(request):
     return render(request, 'pages/enrollnow.html')
+
+def register(request):
+    return render(request, 'pages/register.html')
+
+def login(request):
+    return render(request, 'pages/login.html')
+
+def blog_grid(request):
+    return render(request, 'pages/blog_grid.html')
+
+def blog_details(request):
+    return render(request, 'pages/blog_details.html')

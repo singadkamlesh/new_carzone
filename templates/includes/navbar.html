@@ -6,9 +6,9 @@
     <div class="row">
       <div class="col-lg-8 col-md-12">
         <div class="header-search-logo d-none d-lg-block">
-          <a class="header-logo" href="{% url 'home'%}">
-            <img src="{%static 'images/brand/logo1.png' %}" class="header-brand-img" alt=" logo">
-            <img src="{%static 'images/brand/logo.png' %}" class="header-brand-img header-white" alt="logo">
+          <a class="header-logo" href="{% url 'home' %}">
+            <img src="{% static 'images/brand/logo1.png' %}" class="header-brand-img" alt=" logo">
+            <img src="{% static 'images/brand/logo.png' %}" class="header-brand-img header-white" alt="logo">
           </a>
         </div>
       </div>
@@ -37,8 +37,8 @@
   <div class="horizontal-header clearfix ">
     <div class="container">
       <a id="horizontal-navtoggle" class="animated-arrow"><span></span></a>
-      <span class="smllogo"><img src="{%static 'images/brand/logo1.png' %}" width="120" alt="img"/></span>
-      <span class="smllogo-white"><img src="{%static 'images/brand/logo.png' %}" width="120" alt="img"/></span>
+      <span class="smllogo"><img src="{% static 'images/brand/logo1.png' %}" width="120" alt="img"/></span>
+      <span class="smllogo-white"><img src="{% static 'images/brand/logo.png' %}" width="120" alt="img"/></span>
       <a href="tel:245-6325-3256" class="callusbtn"><i class="fa fa-phone" aria-hidden="true"></i></a>
     </div>
   </div>
@@ -50,18 +50,7 @@
   <div class="horizontal-mainwrapper container clearfix">
     <nav class="horizontalMenu clearfix d-md-flex">
       <ul class="horizontalMenu-list">
-        <li aria-haspopup="true"><a href="{% url 'home' %}">Home <span class="fe fe-chevron-down"></span></a>
-          <ul class="sub-menu">
-            <li aria-haspopup="true"><a href="{% url 'home' %}">Home Default</a></li>
-            <li aria-haspopup="true"><a href="index-text.html">Home Text</a></li>
-            <li aria-haspopup="true"><a href="index-slides.html">Home Slides</a></li>
-            <li aria-haspopup="true"><a href="index-video.html">Home Video</a></li>
-            <li aria-haspopup="true"><a href="index-animation.html">Home Animation</a></li>
-            <li aria-haspopup="true"><a href="index-map.html">Home Map</a></li>
-            <li aria-haspopup="true"><a href="index-intro-page.html">Home Intro Page</a></li>
-            <li aria-haspopup="true"><a href="index-popup-login.html">Home Pop-up login</a></li>
-            <li aria-haspopup="true"><a href="index-banner.html">Home Banner</a></li>
-          </ul>
+        <li aria-haspopup="true"><a href="{% url 'home' %}">Home</a>
         </li>
         <li aria-haspopup="true"><a href="{% url 'about' %}">About Us </a></li>
         <li aria-haspopup="true"><a href="{% url 'widgets' %}">Widgets</a></li>
@@ -83,7 +72,7 @@
                   </ul>
                   <ul class="col link-list">
                     <li class="title">Other pages</li>
-                    <li><a href="ad-list.html">Course Listing</a></li>
+                    <li><a href="{% url 'course' %}">Course Listing</a></li>
                     <li><a href="ad-list-right.html">Course Listing Right</a></li>
                     <li><a href="ad-details.html">Course Details</a></li>
                     <li><a href="ad-details-right.html">Course Details Right</a></li>
@@ -119,36 +108,19 @@
             </div>
           </div>
         </li>
-        <li aria-haspopup="true"><a href="#">Blog <span class="fe fe-chevron-down m-0"></span></a>
+        <li aria-haspopup="true"><a href="{% url 'blog_grid' %}">Blog <span class="fe fe-chevron-down m-0"></span></a>
           <ul class="sub-menu">
             <li aria-haspopup="true"><a href="#">Blog Grid <i class="fa fa-angle-right float-right mt-1 d-none d-lg-block"></i></a>
                <ul class="sub-menu">
                 <li aria-haspopup="true"><a href="blog-grid.html">Blog Grid Left</a></li>
-                <li aria-haspopup="true"><a href="blog-grid-right.html">Blog Grid Right</a></li>
-                <li aria-haspopup="true"><a href="blog-grid-center.html">Blog Grid Center</a></li>
-              </ul>
-            </li>
-            <li aria-haspopup="true"><a href="#">Blog List <i class="fa fa-angle-right float-right mt-1 d-none d-lg-block"></i></a>
-               <ul class="sub-menu">
-                <li aria-haspopup="true"><a href="blog-list.html">Blog List Left</a></li>
-                <li aria-haspopup="true"><a href="blog-list-right.html">Blog List Right</a></li>
-                <li aria-haspopup="true"><a href="blog-list-center.html">Blog List Center</a></li>
-              </ul>
-            </li>
-            <li aria-haspopup="true"><a href="#">Blog Details <i class="fa fa-angle-right float-right mt-1 d-none d-lg-block"></i></a>
-              <ul class="sub-menu">
-                <li aria-haspopup="true"><a href="blog-details.html">Blog Details Left</a></li>
-                <li aria-haspopup="true"><a href="blog-details-right.html">Blog Details Right</a></li>
-                <li aria-haspopup="true"><a href="blog-details-center.html">Blog Details Center</a></li>
+                  <li aria-haspopup="true"><a href="blog-details.html">Blog Details Left</a></li>
+
               </ul>
             </li>
           </ul>
         </li>
         <li aria-haspopup="true"><a href="#">Custom Pages <span class="fe fe-chevron-down m-0"></span></a>
           <ul class="sub-menu">
-            <li><a href="register.html">Register</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="login-2.html">Login 02</a></li>
             <li><a href="forgot.html">Forgot Password</a></li>
             <li><a href="lockscreen.html">Lock Screen</a></li>
             <li><a href="underconstruction.html">Under Constructions</a></li>
